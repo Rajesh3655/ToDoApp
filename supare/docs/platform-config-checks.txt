@@ -1,0 +1,4 @@
+PASS: Android network/storage permissions, backup exclusions and component exposure
+PASS: iOS app identity, protected-document exposure and permission explanations
+PASS: application source has no network clients; platform XML parses
+Static configuration checks passed. Flutter compilation and device checks are separate.

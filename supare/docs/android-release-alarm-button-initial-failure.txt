@@ -1,0 +1,9 @@
+Initial release alarm-button validation, before correction
+
+The real release APK delivered an AlarmManager alarm after its application process was killed with am kill (not force-stop). Android restarted the process for AlarmReceiver; AlarmService became foreground and AlarmActivity displayed the full title plus Done/Snooze/Stop buttons.
+
+Tapping the real AlarmActivity Snooze5 button closed the activity but did not stop the foreground service or create a future alarm. MainActivity still showed the original overdue time. Android logcat reported a Bundle type mismatch: the id extra was Integer, while AlarmActionReceiver expects String.
+
+Cause: Button.apply creates an implicit View receiver. Unqualified id inside its click listener resolves to View.id rather than the outer AlarmActivity task ID. The explicit fix is putExtra("id", this@AlarmActivity.id). All native alarm buttons share this click handler, so the correction is mandatory. Direct receiver-intent tests had not exercised this UI scope.
+
+Cleanup used the ordinary Flutter Complete task action, which correctly stopped the service. A button.performClick regression and corrected release artifacts are required before claiming successful native button behavior. See the final android-release-smoke.txt for corrected results.

@@ -1,0 +1,17 @@
+Initial release startup validation (before correction)
+
+Device: Android11/API30 defaultAOSP x86_64 software emulator, emulator-5554.
+Network: airplane mode1, Wi-Fi0, mobile-data0.
+Artifact installed: initial supare-1.0.0-test-key.apk, release mode (not debug).
+adb install: Success.
+am start -W: activity launch wait timed out after11542ms; process remained present.
+
+Actual Android logcat:
+DatabaseException(unknown error (code0 SQLITE_OK): Queries can be performed using SQLiteDatabase query or rawQuery methods only.) sql 'PRAGMA secure_delete = ON' args [] during open, closing...
+
+Diagnosis: sqflite Android classifies this PRAGMA as a query; Database.execute is not valid for this statement on Android, although the host FFI database accepted it.
+Correction: AppStore.open onConfigure uses await db.rawQuery('PRAGMA secure_delete = ON'). Host-only passing tests did not establish Android startup readiness.
+
+SystemUI also showed a first-boot software-emulation responsiveness warning under concurrent build load. This is separate from the deterministic application database exception.
+
+The initial APK/AAB must be replaced with corrected artifacts. See the final integration/release-smoke logs for subsequent outcomes; this file does not claim the initial application started successfully.

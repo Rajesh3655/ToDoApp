@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="app.supare.offline.AlarmDeliveryDeviceTest" tests="7" failures="0" errors="0" skipped="0" time="40.349" timestamp="2026-11-09T19:47:13" hostname="localhost">
+  <properties>
+    <property name="device" value="emulator-5554 - 11" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="exactAlarmStartsNativeServiceAndCancellationStopsIt" classname="app.supare.offline.AlarmDeliveryDeviceTest" time="5.284" />
+  <testcase name="nativeDoneActionStopsRingingAndQueuesDurableCompletion" classname="app.supare.offline.AlarmDeliveryDeviceTest" time="9.893" />
+  <testcase name="cancelledExactAlarmDoesNotDeliver" classname="app.supare.offline.AlarmDeliveryDeviceTest" time="4.025" />
+  <testcase name="nativeSnoozeActionStopsRingingAndPersistsFiveMinuteAlarm" classname="app.supare.offline.AlarmDeliveryDeviceTest" time="7.464" />
+  <testcase name="encryptsTaskAndPreventsDuplicateDelivery" classname="app.supare.offline.AlarmStoreDeviceTest" time="1.031" />
+  <testcase name="actionsRemainDurableUntilAcknowledged" classname="app.supare.offline.AlarmStoreDeviceTest" time="0.682" />
+  <testcase name="rejectsStaleAlarmToken" classname="app.supare.offline.AlarmStoreDeviceTest" time="0.531" />
+</testsuite>

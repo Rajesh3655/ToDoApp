@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="app.supare.offline.AlarmDeliveryDeviceTest" tests="10" failures="0" errors="0" skipped="0" time="108.4" timestamp="2026-11-09T20:09:10" hostname="localhost">
+  <properties>
+    <property name="device" value="emulator-5554 - 11" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="exactAlarmStartsNativeServiceAndCancellationStopsIt" classname="app.supare.offline.AlarmDeliveryDeviceTest" time="5.951" />
+  <testcase name="nativeDoneActionStopsRingingAndQueuesDurableCompletion" classname="app.supare.offline.AlarmDeliveryDeviceTest" time="9.533" />
+  <testcase name="cancelledExactAlarmDoesNotDeliver" classname="app.supare.offline.AlarmDeliveryDeviceTest" time="4.754" />
+  <testcase name="nativeSnoozeActionStopsRingingAndPersistsFiveMinuteAlarm" classname="app.supare.offline.AlarmDeliveryDeviceTest" time="8.398" />
+  <testcase name="encryptsTaskAndPreventsDuplicateDelivery" classname="app.supare.offline.AlarmStoreDeviceTest" time="1.061" />
+  <testcase name="actionsRemainDurableUntilAcknowledged" classname="app.supare.offline.AlarmStoreDeviceTest" time="0.78" />
+  <testcase name="rejectsStaleAlarmToken" classname="app.supare.offline.AlarmStoreDeviceTest" time="0.454" />
+  <testcase name="actualStopButtonSilencesAndKeepsTaskUnfinished" classname="app.supare.offline.AlarmUiDeviceTest" time="12.544" />
+  <testcase name="actualDoneButtonSilencesCancelsAndQueuesCompletionForCorrectTask" classname="app.supare.offline.AlarmUiDeviceTest" time="13.499" />
+  <testcase name="actualSnoozeButtonsSilenceAndScheduleSelectedFiveTenFifteenMinutes" classname="app.supare.offline.AlarmUiDeviceTest" time="40.725" />
+</testsuite>

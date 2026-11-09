@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.supare.offline.AlarmMathTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-11-09T19:21:54" hostname="ab664a71a83a" time="0.013">
+  <properties/>
+  <testcase name="weeklyAdvancesSevenDays" classname="app.supare.offline.AlarmMathTest" time="0.003"/>
+  <testcase name="customIntervalIsBounded" classname="app.supare.offline.AlarmMathTest" time="0.007"/>
+  <testcase name="dailyPreservesWallClockAcrossDaylightSaving" classname="app.supare.offline.AlarmMathTest" time="0.001"/>
+  <testcase name="dailyAdvancesCalendarDay" classname="app.supare.offline.AlarmMathTest" time="0.0"/>
+  <testcase name="monthlyRetainsOriginalAnchorAfterShortMonth" classname="app.supare.offline.AlarmMathTest" time="0.001"/>
+  <testcase name="monthlyClampsToLastDay" classname="app.supare.offline.AlarmMathTest" time="0.0"/>
+  <testcase name="oneTimeHasNoNextOccurrence" classname="app.supare.offline.AlarmMathTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,6 @@
+00:00 +0: loading /workspace/ToDoApp/supare/integration_test/app_test.dart
+[        ] [   +4 ms] Failed to initialize analytics reporting: FileSystemException: Cannot create file, path = '/home/agent/.flutter' (OS Error: Read-only file system, errno = 30)
+00:00 +0: offline native task creation, restart persistence, and completion
+02:02 +1: (tearDownAll)
+02:07 +1: All tests passed!
+[   +8 ms] Failed to initialize analytics reporting: FileSystemException: Cannot create file, path = '/home/agent/.flutter' (OS Error: Read-only file system, errno = 30)

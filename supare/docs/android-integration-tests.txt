@@ -1,0 +1,33 @@
+Android integration validation
+
+Device: emulator-5554, Android 11 / API 30, default AOSP x86_64 image.
+Runtime: software TCG / SwiftShader; no KVM or physical device.
+Offline settings verified: airplane mode=1, Wi-Fi=0, mobile data=0.
+Actual platform plugins: SQLite, Android Keystore-backed secure storage, native AlarmManager scheduling; no fake persistence or scheduling bridge.
+
+Run A:
+flutter --suppress-analytics test integration_test/app_test.dart -d emulator-5554 --reporter expanded --timeout 300s --verbose
+
+- offline native task creation, restart persistence, and completion: failed a premature form-close assertion after persistence but before the real asynchronous native schedule returned.
+- device encrypted wallet, PIN, persistence and authenticated backup restore: PASSED.
+- Result: 1 passed, 1 failed; command exit 1. Wallet checks completed in the same run despite the earlier task assertion failure.
+
+Correction to the task integration test: wait up to two real minutes for both persisted task and closed form, failing immediately on a native scheduling error. Preserve the form-close and native-success assertions. This changes test synchronization, not application behavior or security parameters.
+
+Run B (targeted corrected task test):
+flutter --suppress-analytics test integration_test/app_test.dart -d emulator-5554 --plain-name 'offline native task creation, restart persistence, and completion' --reporter expanded --timeout 300s --verbose
+
+00:00 +0: offline native task creation, restart persistence, and completion
+02:02 +1: (tearDownAll)
+02:07 +1: All tests passed!
+Command exit: 0.
+
+Both named integration tests passed in their latest relevant executions. The complete suite was not rerun together after the test-only synchronization correction; the unchanged passing wallet test was not repeated.
+
+The platform tests also verified the production fix from Database.execute to rawQuery for PRAGMA secure_delete, which Android requires. See android-release-initial-failure.txt for the initial release failure and the final release smoke record for corrected release behavior.
+
+Host runner diagnosis: the initial Dart CLI machine-output error came from read-only analytics configuration. A project-contained state directory linked from the expected SDK location resolved it. Normal DDS then worked; a --no-dds retry encountered Flutter's hardcoded five-second direct VM connection timeout on software emulation. No SDK source patch, disabled assertion, fake platform dependency or cryptographic downgrade was used.
+
+Not covered: physical-device audibility/vibration, biometric enrollment, camera and share-sheet UI, Android 12+ exact-alarm prompts, Android 14+ full-screen intent policy, physical lock screen/OEM power management, or iOS.
+
+Verbose diagnostics with transient local VM authorization URLs remain under ignored tool/ paths; this report contains no VM authorization tokens.

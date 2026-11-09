@@ -1,0 +1,18 @@
+00:00 +0: loading /workspace/ToDoApp/supare/integration_test/app_test.dart
+Running Gradle task 'assembleDebug'...                             18.9s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...          11.9s
+00:00 +0 -1: loading /workspace/ToDoApp/supare/integration_test/app_test.dart [E]
+  Failed to load "/workspace/ToDoApp/supare/integration_test/app_test.dart": Connecting to the VM Service timed out.
+  package:flutter_tools/src/test/integration_test_device.dart 100:28  IntegrationTestTestDevice.start.<fn>
+  dart:async/zone.dart 1517:47                                        _rootRun
+  dart:async/zone.dart 1422:19                                        _CustomZone.run
+  dart:async/future_impl.dart 1054:34                                 Future.timeout.<fn>
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/test/integration_test_device.dart 94:9    IntegrationTestTestDevice.start
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/test/flutter_platform.dart 680:51         FlutterPlatform._startTest.<fn>
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/base/async_guard.dart 108:24              asyncGuard.<fn>
+  
+00:00 +0 -1: Some tests failed.

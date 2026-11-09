@@ -1,0 +1,40 @@
+Corrected Android release smoke validation — PASSED
+
+Artifact: releases/android/supare-1.0.0-test-key.apk
+SHA-256: e4f54be1cc72b09d2c34fe724cef954946631bb544fe252064f41c9fc2d7f7d9
+Build: release mode, test-key signed, app.supare.offline, version 1.0.0 (code 1).
+Device: emulator-5554, Android 11 / API 30 default AOSP x86_64, software TCG/SwiftShader, no KVM.
+Network: airplane mode=1, Wi-Fi=0, mobile-data=0.
+
+Installation and startup
+- adb install -r: Success.
+- am start -W: Status ok, COLD startup 9543 ms (software emulator).
+- Today rendered the expected four tabs and empty state.
+- No DatabaseException, FATAL EXCEPTION, unhandled Dart exception, failed native action, or task-ID type mismatch in corrected-release logcat.
+
+Real UI and closed-process alarm
+- Created a real task through the release UI: Supare offline alarm check.
+- Selected Alarm mode and used the ordinary native-style time picker for 2026-11-10T01:48:00+05:30.
+- Completed Save, pressed Home, then used am kill app.supare.offline. No application PID remained before due. Force-stop was deliberately not used because Android cancels alarms for force-stopped apps.
+- Powered the emulated screen off using its ordinary power-key event.
+- Android restarted a new process, PID 5999, for native AlarmReceiver; observed 1 second(s) after due under software emulation.
+- AlarmService became foreground; native AlarmActivity foregrounded/woke the screen and displayed the full title plus Done, Snooze 5/10/15 and Stop controls.
+
+Corrected native Snooze button
+- Tapped the actual AlarmActivity Snooze 5 minutes button.
+- Foreground alarm service stopped.
+- Exactly one native future alarm remained, with 298 seconds remaining when checked: 2026-11-10T01:53:56.672000+05:30.
+- Reopening Flutter showed the same pending task rescheduled to 1:53 AM; the ID was dispatched correctly and its pending state was preserved.
+- The earlier implicit View.id scope bug is fixed by explicit this@AlarmActivity.id; a separate 10/10 native instrumentation run covers actual button.performClick dispatch for every alarm control.
+
+Cleanup
+- Completed the task through the ordinary Flutter action; its future native alarm was cancelled.
+- Verified completion history, then deleted the synthetic task with the normal confirmation dialog.
+- Today returned to A clear space.; no Supare RTC_WAKEUP alarm or AlarmService remained.
+- No mock/demo task or document data was added to release source/assets.
+
+Limits
+- This is emulator evidence, not a physical-device test. Host audio was disabled; physical audibility, vibration, biometric enrollment, real device lock-screen/OEM power behavior, reboot and Android 12+/14+ permission restrictions remain unverified here.
+- Verified Snooze scheduling and silence; the five-minute second ring was cancelled during cleanup rather than waited out.
+- Screenshot capture was refused by FLAG_SECURE; no protection was bypassed and no empty PNG is delivered.
+- Initial startup/runner/button failures and their fixes are recorded separately. Raw device and VM diagnostics remain in ignored tool/ paths.

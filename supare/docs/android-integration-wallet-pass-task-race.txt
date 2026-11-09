@@ -1,0 +1,9 @@
+00:00 +0: loading /workspace/ToDoApp/supare/integration_test/app_test.dart
+[        ] [   +4 ms] Failed to initialize analytics reporting: FileSystemException: Cannot create file, path = '/home/agent/.flutter' (OS Error: Read-only file system, errno = 30)
+00:00 +0: offline native task creation, restart persistence, and completion
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+02:02 +0 -1: offline native task creation, restart persistence, and completion [E]
+02:02 +0 -1: device encrypted wallet, PIN, persistence and authenticated backup restore
+05:08 +1 -1: (tearDownAll)
+05:12 +1 -1: Some tests failed.
+[   +5 ms] Failed to initialize analytics reporting: FileSystemException: Cannot create file, path = '/home/agent/.flutter' (OS Error: Read-only file system, errno = 30)

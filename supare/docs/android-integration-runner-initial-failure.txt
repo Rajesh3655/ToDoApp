@@ -1,0 +1,16 @@
+00:00 +0: loading /workspace/ToDoApp/supare/integration_test/app_test.dart
+Running Gradle task 'assembleDebug'...                          
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+Running Gradle task 'assembleDebug'...                            109.4s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...          10.0s
+00:00 +0 -1: loading /workspace/ToDoApp/supare/integration_test/app_test.dart [E]
+  Failed to load "/workspace/ToDoApp/supare/integration_test/app_test.dart":
+  Unexpected character (at character 1)
+  An unexpected error was encountered by the Dart CLI.
+  ^
+  
+00:00 +0 -1: Some tests failed.

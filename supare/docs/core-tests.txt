@@ -1,0 +1,23 @@
+00:00 +0: loading /workspace/ToDoApp/supare/test/core_crypto_test.dart
+00:00 +0: /workspace/ToDoApp/supare/test/core_crypto_test.dart: AES-GCM roundtrip binds ciphertext to its record context
+00:00 +1: /workspace/ToDoApp/supare/test/core_crypto_test.dart: AES-GCM generates unique nonces and rejects tampering
+00:00 +2: /workspace/ToDoApp/supare/test/core_crypto_test.dart: ciphertext cannot be read under a different device key
+00:00 +3: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:00 +4: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:00 +5: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:00 +6: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:00 +7: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:00 +8: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:00 +9: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:00 +10: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:00 +11: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:00 +12: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:00 +13: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:00 +14: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:00 +15: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:01 +16: /workspace/ToDoApp/supare/test/core_crypto_test.dart: portable backup restores without original device key and rejects wrong password
+00:03 +17: /workspace/ToDoApp/supare/test/core_crypto_test.dart: backup rejects weak passwords before deriving a key
+00:03 +18: /workspace/ToDoApp/supare/test/core_crypto_test.dart: PIN retry throttling survives a recreated auth gate
+00:03 +19: /workspace/ToDoApp/supare/test/core_crypto_test.dart: locking invalidates in-flight PIN enrollment and unlock
+00:05 +20: /workspace/ToDoApp/supare/test/core_crypto_test.dart: PIN requires enrollment, survives new auth instance and cannot change while locked
+00:08 +21: All tests passed!

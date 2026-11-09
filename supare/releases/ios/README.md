@@ -1,0 +1,1 @@
+No iOS release artifact has been generated in this Linux environment. A macOS/Xcode build and a real signing identity are required; see ../../docs/IOS.md and ../../docs/RELEASE.md. This source uses local-notification fallback, with no AlarmKit integration.

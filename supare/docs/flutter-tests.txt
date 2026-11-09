@@ -1,0 +1,32 @@
+00:00 +0: loading /workspace/ToDoApp/supare/test/wallet_ui_test.dart
+00:00 +0: /workspace/ToDoApp/supare/test/wallet_ui_test.dart: wallet hides metadata while locked and opens only after successful PIN
+00:00 +1: /workspace/ToDoApp/supare/test/wallet_ui_test.dart: wallet hides metadata while locked and opens only after successful PIN
+00:00 +2: /workspace/ToDoApp/supare/test/wallet_ui_test.dart: wallet hides metadata while locked and opens only after successful PIN
+00:00 +3: /workspace/ToDoApp/supare/test/wallet_ui_test.dart: wallet hides metadata while locked and opens only after successful PIN
+00:00 +4: /workspace/ToDoApp/supare/test/wallet_ui_test.dart: wallet hides metadata while locked and opens only after successful PIN
+00:01 +5: /workspace/ToDoApp/supare/test/app_widget_test.dart: four tabs navigate to real task, wallet lock, and settings screens
+00:02 +6: /workspace/ToDoApp/supare/test/app_widget_test.dart: four tabs navigate to real task, wallet lock, and settings screens
+00:02 +7: /workspace/ToDoApp/supare/test/app_widget_test.dart: four tabs navigate to real task, wallet lock, and settings screens
+00:02 +8: /workspace/ToDoApp/supare/test/core_crypto_test.dart: AES-GCM roundtrip binds ciphertext to its record context
+00:02 +9: /workspace/ToDoApp/supare/test/app_widget_test.dart: task form rejects empty title, saves, and persists its real reminder
+00:02 +10: /workspace/ToDoApp/supare/test/app_widget_test.dart: task form rejects empty title, saves, and persists its real reminder
+00:03 +11: /workspace/ToDoApp/supare/test/app_widget_test.dart: task form rejects empty title, saves, and persists its real reminder
+00:03 +12: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:04 +13: /workspace/ToDoApp/supare/test/core_crypto_test.dart: Argon2id derivation matches independent libargon2 reference
+00:04 +14: /workspace/ToDoApp/supare/test/core_crypto_test.dart: portable backup restores without original device key and rejects wrong password
+00:04 +15: /workspace/ToDoApp/supare/test/core_crypto_test.dart: portable backup restores without original device key and rejects wrong password
+00:05 +16: /workspace/ToDoApp/supare/test/core_crypto_test.dart: portable backup restores without original device key and rejects wrong password
+00:05 +17: /workspace/ToDoApp/supare/test/core_crypto_test.dart: portable backup restores without original device key and rejects wrong password
+00:05 +18: /workspace/ToDoApp/supare/test/core_crypto_test.dart: portable backup restores without original device key and rejects wrong password
+00:05 +19: /workspace/ToDoApp/supare/test/core_crypto_test.dart: portable backup restores without original device key and rejects wrong password
+00:05 +20: /workspace/ToDoApp/supare/test/core_crypto_test.dart: portable backup restores without original device key and rejects wrong password
+00:05 +21: /workspace/ToDoApp/supare/test/core_crypto_test.dart: portable backup restores without original device key and rejects wrong password
+00:05 +22: /workspace/ToDoApp/supare/test/core_crypto_test.dart: portable backup restores without original device key and rejects wrong password
+00:05 +23: /workspace/ToDoApp/supare/test/core_crypto_test.dart: portable backup restores without original device key and rejects wrong password
+00:05 +24: /workspace/ToDoApp/supare/test/core_crypto_test.dart: portable backup restores without original device key and rejects wrong password
+00:05 +25: /workspace/ToDoApp/supare/test/core_crypto_test.dart: portable backup restores without original device key and rejects wrong password
+00:07 +26: /workspace/ToDoApp/supare/test/core_crypto_test.dart: backup rejects weak passwords before deriving a key
+00:07 +27: /workspace/ToDoApp/supare/test/core_crypto_test.dart: PIN retry throttling survives a recreated auth gate
+00:07 +28: /workspace/ToDoApp/supare/test/core_crypto_test.dart: locking invalidates in-flight PIN enrollment and unlock
+00:09 +29: /workspace/ToDoApp/supare/test/core_crypto_test.dart: PIN requires enrollment, survives new auth instance and cannot change while locked
+00:12 +30: All tests passed!
